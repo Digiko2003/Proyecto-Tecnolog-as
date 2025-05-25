@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Sesiones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 80vh;
+        }
+        
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 90%;
+            max-width: 1200px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #1a73e8;
+            color: white;
+            font-weight: normal;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #f1f3f4;
+        }
+        
+        .button-container {
+            margin: 30px 0;
+        }
+        
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            min-width: 150px;
+        }
+        
+        button:hover {
+            background-color: #0d5bba;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro de Sesiones</h1>
+    
+    <table id="sessionTable">
+        <thead>
+            <tr>
+                <th>ID de Usuario</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Hora de Inicio</th>
+                <th>Hora de Salida</th>
+                <th>Duración de Sesión</th>
+            </tr>
+        </thead>
+        <tbody id="sessionTableBody"></tbody>
+    </table>
+    
+    <div class="button-container">
+        <button onclick="window.location.href='homepage.html'">Volver a Homepage</button>
+        <button id="clearSessions">Limpiar Registros</button>
+    </div>
+
+    <script src="registro.js"></script>
+</body>
+</html>
